@@ -1,0 +1,39 @@
+---
+const technologies = [
+  { name: "JavaScript", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" },
+  { name: "React", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
+  { name: "Node.js", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" },
+  { name: "Express.js", icon: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
+  { name: "SQL Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+  { name: "NoSQL (MongoDB)", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" },
+  { name: "C#", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" },
+  { name: "Astro", icon: "https://cdn.jsdelivr.net/npm/@astrojs/icons@0.0.5/dist/svg/astro.svg" },
+  { name: "CSS3", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" },
+  { name: "HTML5", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" },
+  { name: "Linux", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" },
+  { name: "API", icon: "https://cdn-icons-png.flaticon.com/512/4712/4712250.png" },
+  { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" },
+  { name: "Git", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" },
+  { name: "Docker", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" },
+];
+---
+
+<section class="">
+  <div class="container mx-auto px-6 text-center">
+    <p class="text-lg text-left text-gray-400 mb-8">
+      Estas son las herramientas que he dominado para crear experiencias web únicas.
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+      {technologies.map((tech) => (
+        <div
+          class="flex flex-col items-center bg-gray-800 p-2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+
+        >
+          <img src={tech.icon} alt={tech.name} class="w-12 h-12" />
+          <p class="text-white text-lg mt-4 font-medium">{tech.name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

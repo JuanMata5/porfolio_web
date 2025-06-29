@@ -9,8 +9,8 @@ import SocialPill from "@/components/SocialPill.astro"
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
-      class="rounded-full shadow-lg size-16"
-      src="/midudev.webp"
+      class="rounded-full shadow-lg size-16 object-cover "
+      src="/me.jpeg"
       alt={personalImageAlt}
     />
     <a
@@ -25,24 +25,33 @@ import SocialPill from "@/components/SocialPill.astro"
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy midudev
+    Hey, soy Juanjo
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +15 años de experiencia. <strong
-      >Ingeniero de Software y Creador de Contenido sobre Programación</strong
-    > de Barcelona, España 🇪🇸. Especializado en el desarrollo de aplicaciones web
+    +1 año de experiencia. <strong
+      >Desarrollador Web Full Stack</strong
+    > de Buenos Aires, Argentina 🇦🇷. Especializado en el desarrollo de aplicaciones web
     únicas.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
-      <MailIcon class="size-4" />
+    <SocialPill href="mailto:mata.juan.jose05@gmail.com">
+      <MailIcon class="size-6" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
+      
+  <a href="https://t.me/Juanmata0101" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    fill="currentColor" 
+    viewBox="0 0 24 24" 
+    class="inline-block">
+    <path d="M22.765 2.026a2.38 2.38 0 0 0-2.424-.17L2.855 10.235a2.368 2.368 0 0 0 .173 4.334l3.694 1.203 1.23 3.655a2.368 2.368 0 0 0 4.07.616l1.827-2.124 3.541 2.61a2.37 2.37 0 0 0 3.61-1.296l3.407-13.076a2.367 2.367 0 0 0-1.642-2.131zm-3.184 14.3-4.32-3.184-2.913 3.39-1.38-4.103 8.635-7.423-9.42 6.36-4.833-1.573 16.23-6.747-2.298 13.28z"/>
+  </svg>
+  Hablame
+</a>
   </nav>
 </div>

@@ -1,46 +1,59 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-}
+
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Registro de Gastos",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Desarrollé una aplicación web interactiva para el registro y control de gastos personales. Permite al usuario ingresar transacciones, clasificarlas como ingresos o egresos y visualizar su saldo actualizado en tiempo real.",
+    link: "https://expense-traker-murex.vercel.app/",
+    github: "https://github.com/JuanMata5/ExpenseTraker.git",
+    image: "/projects/expense_tracker.webp",
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Juego del ahorcado en Java",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Un clásico juego de palabras donde el objetivo es adivinar una palabra secreta letra por letra. Este proyecto implementa el juego de Ahorcados en Java, utilizando la consola para interactuar con el jugador. La palabra secreta es fija, pero el juego permite la entrada de letras y la adivinanza de la palabra completa. ",
+    github: "https://github.com/JuanMata5/juego-ahorcado-java.git",
+    image: "/projects/ahorcados_java_readme.webp",
+
+  },
+  {
+    title: "Shoes Store",
+    description:
+      "Este proyecto consiste en una tienda online especializada en la venta de zapatillas Nike originales. El sitio fue diseñado y desarrollado para ofrecer una experiencia de compra sencilla, rápida y segura, con un diseño moderno y adaptado a dispositivos móviles.",
+    link: "https://integradorjs-kohl.vercel.app/",
+    github: "https://github.com/JuanMata5/INTEGRADORJS.git",
+    image: "/projects/shoes_store_landing.webp",
+
+  },
+  {
+    title: "Buscador de peliculas",
+    description:
+      "Este proyecto fue diseñado para ofrecer a los usuarios una experiencia fluida y atractiva al explorar y descubrir películas. La aplicación permite buscar títulos específicos, explorar géneros y acceder a información detallada sobre cada película, todo en una interfaz moderna y responsiva.",
+     link: "https://movie-app-indol-two.vercel.app/",
+      github: "https://github.com/JuanMata5/MovieApp.git",
+    image: "/projects/movie_search_image.webp",
+
+  },
+  {
+    title: "Conferencia BsAs",
+    description:
+      "Este proyecto es una aplicación web desarrollada como parte del programa Codo a Codo, diseñada para gestionar información y la compra de tickets para una conferencia internacional en Buenos Aires.",
+     link: "https://codo-acodo-js.vercel.app/",
+      github: "https://github.com/JuanMata5/codoAcodo-JS.git",
+    image: "/projects/confbs.jpeg",
+
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -53,18 +66,7 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+   
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
@@ -77,7 +79,7 @@ const PROJECTS = [
           )}
           {link && (
             <LinkButton href={link}>
-              <Link class="size-4" />
+              <Link class="size-4 chil" />
               Preview
             </LinkButton>
           )}
